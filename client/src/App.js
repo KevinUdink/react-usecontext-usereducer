@@ -1,5 +1,6 @@
 import './App.css';
 import MyComponent from './components/MyComponent';
+import Display from './components/Display';
 import StateProvider from './context/StateProvider';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <StateProvider>
         <MyComponent />
+        <Display />
       </StateProvider>
     </div>
   );

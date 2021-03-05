@@ -25,6 +25,67 @@ const MyComponent = () => {
           }) 
         }
         >Click to change theme</button>
+      
+      <div>
+        <label>First Name:</label>
+        <input
+          type="text"
+          name="firstName"
+          value={globalState.firstName}
+          onChange={(e) => globalDispatch({
+            type: "update",
+            payload: {
+              name: e.target.name,
+              value: e.target.value
+            }
+          })}
+          />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input
+          type="text"
+          name="lastName"
+          value={globalState.lastName}
+          onChange={(e) => globalDispatch({
+            type: "update",
+            payload: {
+              name: e.target.name,
+              value: e.target.value
+            }
+          })}
+          />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input
+          type="text"
+          name="email"
+          value={globalState.email}
+          onChange={(e) => globalDispatch({
+            type: "update",
+            payload: {
+              name: e.target.name,
+              value: e.target.value
+            }
+          })}
+          />
+      </div>
+      <div>
+        <label>Favorite Hobby:</label>
+        <input
+          type="text"
+          name="favoriteHobby"
+          value={globalState.favoriteHobby}
+          onChange={(e) => globalDispatch({
+            type: "update",
+            payload: {
+              name: e.target.name,
+              value: e.target.value
+            }
+          })}
+          />
+      </div>
 
     </div>
   )
