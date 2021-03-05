@@ -2,6 +2,10 @@ import React, { createContext, useReducer } from 'react';
 
 const initialState = {
   firstName: "Kevin",
+  textStyle: {
+    color: "blue",
+  },
+  theme: "btn-light-theme",
 }
 
 // this instance holds 2 components
@@ -19,6 +23,16 @@ const StateProvider = ( props ) => {
     console.log("inside of dispatch");
     console.log("type: " + action.type);
     console.log("payload: " + action.payload);
+
+    if(action.type === "change theme") {
+      let newTheme = "";
+
+      action.payload === "btn-light-theme" ?
+        newTheme = "btn-dark-theme"
+        : newTheme = "btn-light-theme"
+
+      return { ...state, theme: newTheme }
+    }
 
   }, initialState)
 
